@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>
+      Facebook.com
+    </title>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  .body {
+    background-color: rgb(238, 245, 245);
+ 
+  }
+  .header {
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    height: 55px;
+position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100px;
+ background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 228, 228);
+}
+  .facebook-logo {
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+    margin-left: 15px;
+   cursor: pointer;
+
+  }
+  .search { 
+margin-top: 7px;
+margin-bottom: 7px;
+padding: 11px;
+padding-right: 40px;
+padding-left: 40px;
+font-family: system-ui;
+font-size: 14px;
+background-color: rgba(237, 245, 255, 0.619);
+border: none;
+border-radius: 20px;
+margin-left: -30px;
+display: flex;
+ justify-content: center;
+ align-items: center;
+ outline: none;
+  }
+  .search-button {
+   height: 30px;
+    margin-top: 13px;
+ color: black;
+ background-color: rgb(237, 245, 255, 0.619);
+  border-radius: 30PX;
+ border: none;
+ margin-right: 0px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  }
+  
+  .home-button {
+margin-right: 130px;
+width: 30px;
+position: relative;
+cursor: pointer;
+
+  }
+ .home-press .home-tool {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -9px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+.home-press:hover .home-tool {
+  opacity: 1;
+  transition: 0.15s;
+}
+.friends-press .friends-tool {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -10px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+  .friends-press:hover .friends-tool {
+opacity: 1;
+transition: 0.15s;
+  }
+  .video-press .video-tool {
+    position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -8px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  }
+  .video-press:hover .video-tool {
+    opacity: 1;
+    transition: 0.15s;
+  }
+  .marketplace-press .marketplace-tool {
+    position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -25px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  }
+  .marketplace-press:hover .marketplace-tool {
+    opacity: 1;
+    transition: 0.15s;
+  }
+  .menu-press .menu-tool {
+    position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -5px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  }
+.menu-press:hover .menu-tool {
+    opacity: 1;
+    transition: 0.15s;
+  }
+.message-press .message-tool {
+    position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -15px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  }
+.message-press:hover .message-tool {
+    opacity: 1;
+    transition: 0.15s;
+  }
+.notification-press .notification-tool {
+    position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -20px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  }
+.notification-press:hover .notification-tool {
+    opacity: 1;
+    transition: 0.15s;
+  }
+.account-press .account-tool {
+    position: absolute;
+  color: white;
+  background-color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  margin-left: -10px;
+ font-family: system-ui;
+  font-size: 13px;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  }
+.account-press:hover .account-tool {
+    opacity: 1;
+    transition: 0.15s;
+  }
+.friends-icon {
+ position: relative;
+margin-right: 130px;
+width: 30px;
+cursor: pointer;
+
+ }
+.video-icon {
+    margin-right: 130px;
+width: 30px;
+position: relative;
+cursor: pointer;
+
+ }
+.marketplace-icon {
+ margin-right: 130px;
+width: 30px;
+height: auto;
+position: relative;
+cursor: pointer;
+ }
+.dot {
+position: absolute;
+color: red;
+margin-top: -44px;
+margin-left: 24px;
+cursor: pointer;
+font-size: 30px;
+ }
+.four {
+  position: absolute;
+color: white;
+margin-top: -30px;
+margin-left: 24px;
+background-color: red;
+font-size: 11px;
+padding-left: 3px;
+padding-right: 3px;
+border-radius: 30px;
+cursor: pointer;
+}
+.five {
+  position: absolute;
+color: white;
+margin-top: -35px;
+margin-left: 24px;
+background-color: red;
+font-size: 11px;
+padding-left: 3px;
+padding-right: 3px;
+border-radius: 30px;
+cursor: pointer;
+}
+.sir-dot {
+  position: absolute;
+color: red;
+margin-top: -48px;
+margin-left: 24px;
+
+font-size: 30px;
+padding-left: 3px;
+padding-right: 3px;
+border-radius: 30px;
+cursor: pointer;
+
+}
+.menu {
+  width: 30px;
+cursor: pointer;
+}
+.middle-section {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.right-section {
+  display: flex;
+margin-left: -80px;
+
+}
+.left-section {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  margin-left: -60px;
+
+
+}
+.menu {
+  margin-right: px;
+ height: 30px;
+ margin-right: 10px;
+ background-color: rgba(232, 230, 230, 0.845);
+ padding: 5px;
+ border-radius: 100%;
+ cursor: pointer;
+}
+.menu:hover {
+  background-color: rgba(211, 211, 211, 0.845);
+}
+.message {
+  margin-right: px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: rgba(232, 230, 230, 0.845);
+ padding: 5px;
+ border-radius: 100%;
+ cursor: pointer;
+ position: relative;
+}
+.message:hover {
+  background-color: rgba(211, 211, 211, 0.845);
+}
+.notification {
+  height: 30px;
+  margin-right: 10px;
+  background-color: rgba(232, 230, 230, 0.845);
+ padding: 5px;
+ border-radius: 100%;
+ cursor: pointer;
+}
+.notification:hover {
+  background-color: rgba(211, 211, 211, 0.845);
+}
+.laptop {
+  width: 40px;
+  height: 40px;
+border-radius: 100%;
+margin-right: 10px;
+cursor: pointer;
+position: relative;
+}
+.thirty {
+  position: absolute;
+  color: white;
+  background-color: red;
+  margin-top: -45px;
+  margin-left: 28px;
+  border-radius: 40px;
+  padding: 4px;
+  padding-top: 0;
+  padding-bottom: 4px;
+ font-size: 11px;
+ height: 11px;
+ width: 11px;
+ font-weight: 800;
+ font-family: system-ui;
+ cursor: pointer;
+}
+
+.sidebar {
+left: 0;
+  bottom: 0;
+  padding-top: 50px;
+  margin-left: 10px;
+  height: 450px;
+
+overflow-y: auto;
+overflow-x: hidden;
+width: 300px;
+scrollbar-color: black;
+position: fixed;
+
+}
+.sidebar-link {
+  height: 74px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ cursor: pointer;
+ width: 30px;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(128, 128, 128, 0.158);
+margin-right: 59px;
+padding-right: 230px;
+
+
+}
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+.sidebar-link div {
+  font-family: Roboto, Arial;
+  font-weight: 600;
+  width: 40px;
+}
+.home-side {
+  margin-left: 85px;
+  margin-top: -25px;
+}
+.lapi {
+  border-radius: 100%;
+height: 40px;
+  width: 24px;
+}
+.james-side {
+margin-left: 220px;
+  margin-top: -19px;
+}
+.friends-side {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.dash {
+  margin-left: 89px;
+  margin-top: -25px;
+}                                               
+.prof {
+  margin-left: 290px;
+  margin-top: -19px;
+}
+.guru {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.oja {
+  margin-left: 89px;
+  margin-top: -25px;
+
+}
+.vid {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.mem {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.save {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.pag {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.reel {
+  margin-left: 89px;
+  margin-top: -25px;
+}
+.page {
+  width: 50px;
+
+}
+.src {
+  width: 30px;
+
+}
+.squad {
+ font-family: Arial; 
+ font-size: 13px;
+ color: rgb(104, 103, 103);
+
+}
+.pri:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ter:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.adv:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.adc:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.coo:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mor:hover {
+ cursor: pointer;
+}
+.met:hover {
+  cursor: pointer;
+}
+.upper-center {
+  display: flex;
+height: 30px;
+  overflow-x: hidden;
+  margin-top: 70px;
+  width: 50px;
+  margin-left: 370px;
+  background-color: white;
+  padding: 100px;
+  padding-bottom: 0px;
+  border-radius: 15px;
+  padding-right: 300px;
+  overflow: hidden;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgba(201, 201, 201, 0.427);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color:  rgba(201, 201, 201, 0.427);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color:  rgba(201, 201, 201, 0.427);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color:  rgba(201, 201, 201, 0.427);
+}
+.laptop-three {
+  margin-top: -89px;
+  width: 40px;
+  height: 40px;
+  margin-left: -90px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-bottom: 1200px;
+}
+.type-place {
+margin-left: -42px;
+  cursor: pointer;
+  margin-bottom: 100px;
+  height: inherit;
+  margin-top: -89px;
+  padding-left: 8px;
+  padding-right: 195px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 30px;
+  background-color: rgba(224, 232, 241, 0.619);
+  border: none;
+font-family: Arial;
+font-size: 14px;
+outline: none;
+}
+.type-place:hover {
+background-color:  rgba(224, 232, 241, 0.854);
+transition: 0.15s;
+}
+.the-one {
+ 
+}
+.line {
+  margin-left: 388px;
+  margin-top: -80px;
+  color: rgba(128, 128, 128, 0.279);
+}
+.live-video {
+ margin-left: -10px;
+  height: 50px;
+  margin-top: -10px;
+}
+.live-vide {
+ color: rgb(160, 159, 159);
+  font-family: system-ui;
+ font-weight: 500;
+ margin-top: -43px;
+ margin-left: 35px;
+}
+.live-first {
+ height: 20px;
+  margin-left: 385px;
+  margin-top: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+display: inline-block;
+border-radius: 7px;
+
+
+}
+.live-first:hover {
+  background-color: rgb(238, 245, 245);
+  cursor: pointer;
+}
+.photos-1 {
+  height: 40px;
+  margin-bottom: -10px;
+}
+.photos-reels {
+  height: 30px;
+  margin-bottom: -2px;
+  margin-left: 5px;
+}
+.live-second {
+  margin-left: -15px;
+  margin-top: -10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+display: inline-block;
+border-radius: 7px;
+
+}
+.photos-videos {
+  color: rgb(160, 159, 159);
+  font-family: system-ui;
+ font-weight: 500;
+ margin-top: -30px;
+ margin-left: 35px;
+}
+.live-second:hover {
+  background-color: rgb(238, 245, 245);
+  cursor: pointer;
+}
+.live-third {
+  margin-left: 20px;
+
+}
+.live-second-first {
+  margin-left: 10px;
+}
+.create {
+  display: flex;
+height: -5px;
+  overflow-x: hidden;
+  margin-top: 30px;
+  width: 50px;
+  margin-left: 370px;
+  background-color: white;
+  padding: 100px;
+  padding-bottom: 0px;
+  border-radius: 15px;
+  padding-right: 300px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgba(201, 201, 201, 0.427);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color:  rgba(201, 201, 201, 0.427);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color:  rgba(201, 201, 201, 0.427);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color:  rgba(201, 201, 201, 0.427);
+}
+
+.plus {
+  margin-top: -70px;
+  margin-left: -80px;
+  font-size: 30px;
+ font-weight: bolder;
+ background-color: rgb(238, 245, 245);
+ border-radius: 100%;
+ height: 38px;
+ padding-top: 4px;
+ padding-left: 12px;
+ padding-right: 12px;
+ color: rgb(0, 72, 255);
+
+ cursor: pointer;
+}
+.crea {
+  margin-top: -70px;
+  margin-left: 15px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+}
+.sto {
+  margin-top: -70px;
+  margin-left: 5px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+}
+.sha {
+  margin-top: -50px;
+  margin-left: -82px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+ color:  rgb(160, 159, 159);
+}
+.shaa {
+  margin-top: -50px;
+  margin-left: 6px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+ color:  rgb(160, 159, 159);
+}
+.shaaa {
+  margin-top: -50px;
+  margin-left: 6px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+ color:  rgb(160, 159, 159);
+} 
+.shaaaa {
+  margin-top: -50px;
+  margin-left: 6px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+ color:  rgb(160, 159, 159);
+}
+.shaaaaa {
+  margin-top: -50px;
+  margin-left: 6px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+ color:  rgb(160, 159, 159);
+}
+.shaaaaaa {
+  margin-top: -50px;
+  margin-left: 6px;
+  font-size: 15px;
+ font-weight: 500;
+ font-family: system-ui;
+ color:  rgb(160, 159, 159);
+}
+.create-share {
+  display: flex;
+  cursor: pointer;
+}
+.story-picture {
+  height: 180px;
+  margin-left: 371px;
+  margin-top: 15px;
+  border-radius: 10px;
+width: 120px;
+position: relative;
+}
+.story-picture:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+.story-relative {
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  margin-left: -115px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-bottom: 1200px; 
+  position: absolute;
+  border: solid;
+  border-color: rgba(48, 90, 195, 0.858);
+  border-width: 4px;
+}
+.story-name {
+  margin-left: 378px;
+  margin-top: -35px;
+  color: white;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 14px;
+cursor: pointer;
+}
+.content-one {
+  display: flex;
+height: 550px;
+  overflow: hidden;
+  margin-top: 30px;
+  width: 50px;
+  margin-left: 370px;
+  background-color: white;
+  padding: 100px;
+  padding-bottom: 0px;
+  border-radius: 15px;
+  padding-right: 300px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgba(201, 201, 201, 0.427);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color:  rgba(201, 201, 201, 0.427);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color:  rgba(201, 201, 201, 0.427);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color:  rgba(201, 201, 201, 0.427);
+}
+.content-profile {
+  margin-top: -85px;
+  width: 38px;
+  height: 40px;
+  margin-left: -85px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-bottom: 1200px; 
+  border: solid;
+  border-color: rgba(48, 90, 195, 0.858);
+  border-width: 4px;
+  position: relative;
+}
+.content-name {
+  font-family: Arial;
+  font-weight: 550;
+  font-size: 14px;
+  margin-top: -633px;
+  margin-left: 440px;
+  cursor: pointer;
+}
+.content-name:hover {
+  text-decoration: underline;
+}
+.time-today {
+  font-family: Arial;
+  font-weight: 550;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 440px;
+  cursor: pointer;
+  color: gray;
+  position: relative;
+}
+.time-today:hover {
+  text-decoration: underline;
+}
+.middot {
+  color: black;
+}
+.world-view {
+ height: 12px;
+margin-left: 5px;
+}
+.content-james {
+  height: 390px;
+  width: 451px;
+  margin-left: 370px;
+  margin-top: 130px;
+  cursor: pointer;
+}
+.line-two {
+  margin-left: 380px;
+  margin-top: -2px;
+  color: rgba(128, 128, 128, 0.279);
+  display: flex;
+  cursor: pointer;
+
+}
+.like-emoji {
+  height: 12px;
+  margin-left: 378px;
+  margin-top: 10px;
+  display: flex;
+  height: 17px;
+}
+.love-emoji {
+  height: 12px;
+  margin-left: 391px;
+  margin-top: -25px;
+  display: flex;
+  height: 33px;
+}
+.four-hundred {
+  margin-left: 415px;
+  margin-top: -27px;
+  display: flex;
+ font-size: 14px;
+ font-family: system-ui;
+ color: gray;
+}
+.comment-emoji {
+  height: 12px;
+  margin-left: 753px;
+  margin-top: -19px;
+  display: flex;
+  height: 22px;
+}
+.share-emoji {
+  height: 12px;
+  margin-left: 797px;
+  margin-top: -15px;
+  display: flex;
+  height: 13px; 
+}
+.sixteen {
+  margin-left: 780px;
+  margin-top: -22px;
+  display: flex;
+ font-size: 14px;
+ font-family: system-ui;
+ color: gray;
+}
+.two-hundred {
+  margin-left: 730px;
+  margin-top: -24px;
+  display: flex;
+ font-size: 14px;
+ font-family: system-ui;
+ color: gray;
+}
+.gap {
+  margin-top: -8px;
+  cursor: pointer;
+}
+.gap-two {
+  margin-top: 5px;
+  cursor: pointer;
+}
+.like-down-one {
+  height: 12px;
+  margin-left: 400px;
+  margin-top: 10px;
+  display: flex;
+  height: 21px; 
+  position: relative;
+}
+.comment-down-one {
+  height: 12px;
+  margin-left: 550px;
+  margin-top: -21px;
+  display: flex;
+  height: 30px;  
+}
+.share-down-one {
+  height: 12px;
+  margin-left: 720px;
+  margin-top: -17px;
+  display: flex;
+  height: 18px;   
+}
+.like-down {
+  margin-left: 430px;
+  margin-top: -20px;
+  display: flex;
+ font-size: 14px;
+ font-weight: 600;
+ font-family: system-ui;
+ color: gray;
+}
+.comment-down {
+  margin-left: 580px;
+  margin-top: -26px;
+  display: flex;
+ font-size: 14px;
+ font-weight: 600;
+ font-family: system-ui;
+ color: gray;
+}
+.share-down {
+  margin-left: 748px;
+  margin-top: -20px;
+  display: flex;
+ font-size: 14px;
+ font-weight: 600;
+ font-family: system-ui;
+ color: gray;
+}
+.first-down {
+  cursor: pointer;
+  margin-left: -5px;
+}
+.second-down {
+  margin-left: -5px;
+  margin-top: -22px;
+  cursor: pointer;
+}
+.third-down {
+  margin-left: 13px;
+  cursor: pointer;
+}
+.content-profile-hover {
+  width: 70px;
+  height: 70px;
+  margin-left: 15px;
+  margin-top: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-bottom: 00px; 
+  border: solid;
+  border-color: rgba(48, 90, 195, 0.858);
+  border-width: 4px;
+}
+
+.content-one .content-one-hover {
+    position: absolute;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+margin-left: -475px;
+margin-top: 520px;
+transition: 0.15s;
+height: 200px;
+width: 400px;
+margin-top: -25px;
+margin-left: -180px;
+background-color: white;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgba(201, 201, 201, 0.427);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color:  rgba(201, 201, 201, 0.427);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color:  rgba(201, 201, 201, 0.427);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color:  rgba(201, 201, 201, 0.427);
+
+  }
+  .content-one:hover .content-one-hover {
+    opacity: 1;
+    transition: 0.15s;
+}
+.hover-name {
+  margin-left: 110px;
+  margin-top: -70px;
+  font-size: 22px;
+  font-family: system-ui;
+  font-weight: bolder;
+}
+.hover-button {
+  margin-top: 100px;
+  margin-left: 30px;
+ padding-left: 35px;
+ padding-right: 30px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ font-family: Arial;
+ font-weight: bold;
+ border-radius: 7px;
+ border: none;
+ background-color: rgba(227, 225, 225, 0.621);
+}
+.hover-dash {
+  height: 20px;
+  margin-left: -127px;
+  margin-bottom: -4px;
+}
+.hover-message {
+  margin-top: 100px;
+  margin-left: 102px;
+ padding-left: 35px;
+ padding-right: 30px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ font-family: Arial;
+ font-weight: bold;
+ border-radius: 7px;
+ border: none;
+ color: white;
+ background-color: rgb(31, 87, 228);
+}
+.hover-message-button {
+  height: 20px;
+  margin-left: -115px;
+  margin-bottom: -6px;
+ }
+ .hover-friends {
+
+  height: 20px;
+  margin-left: 100px;
+  margin-bottom: -14px;
+  background-color: rgba(227, 225, 225, 0.621);
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 7px;
+ }
+ .hover-dot {
+  padding-top: 4px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-left: 3px;
+  border-radius: 7px;
+  border: none;
+ font-weight: bolder;
+ font-size: larger;
+ }
+ .hover-study {
+  margin-top: -135px;
+  margin-left: 135px;
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 400;
+ }
+ .hover-school {
+  font-weight: 500;
+ } 
+.hover-time-circle {
+  margin-left: 435px;
+font-family: system-ui;
+font-size: 12px;
+background-color: black;
+color: white;
+font-weight: 400;
+display: inline-block;
+padding-left: 7px;
+padding-right: 7px;
+padding-bottom: 5px;
+padding-top: 5px;
+border-radius: 7px;
+opacity: 0.6;
+position: absolute;
+pointer-events: none;
+ }
+ .hover-time .hover-time-circle {
+opacity: 0;
+ }
+ .hover-time:hover .hover-time-circle {
+opacity: 0.6;
+transition: 0.15s;
+ }
+ .like-hover-background {
+  background-color: blue;
+ }
+ .like-hover-exact {
+  position: absolute;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-top: -70px;
+  margin-left: 348px;
+  width: 210px;
+  height: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+
+  
+background-color: white;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgba(201, 201, 201, 0.427);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color:  rgba(201, 201, 201, 0.427);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color:  rgba(201, 201, 201, 0.427);
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color:  rgba(201, 201, 201, 0.427);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s;
+ }
+ .like-hover .like-hover-exact {
+  opacity: 0;
+  transition: 0.15s;
+ }
+ .like-hover:hover .like-hover-exact {
+  opacity: 1;
+  transition: 0.15s;
+ }
+ .like-emoji-hover {
+  height: 30px;
+  margin-left: 2px;
+  margin-top: -8px;
+ }
+ .love-emoji-hover {
+  height: 60px;
+  margin-left: -5px;
+  margin-top: -24px;
+ }
+ .care-emoji-hover {
+  height: 30px;
+  margin-left: -5px;
+  margin-top: -10px;
+ }
+ .haha-emoji-hover {
+  height: 40px;
+  margin-left: -12px;
+  margin-top: -17px;
+ }
+ .wow-emoji-hover {
+  height: 30px;
+  margin-left: -12px;
+  margin-top: -11px;
+ }
+ .sad-emoji-hover {
+  height: 27px;
+  margin-left: -1px;
+  margin-top: -10px;
+ }
+ .angry-emoji-hover {
+  height: 23px;
+  margin-left: 3px;
+  margin-top: -9px;
+ }
+ .contacts-other-sidebar {
+  margin-left: 980px;
+  margin-top: -4440px;
+    font-family: system-ui;
+    font-weight: 500;
+    color: gray;
+   
+ }
+ .search-other-sidebar {
+  
+  margin-top: -20px;
+  margin-left: 1110px;
+  height: 25px;
+  display: flex;
+ }
+ .search-other-sidebar:hover {
+  background-color: rgba(215, 213, 213, 0.605);
+  border-radius: 100%;
+ }
+ .dot-other-sidebar {
+
+  margin-top: -30px;
+  margin-left: 1180px;
+  height: 25px;
+  font-weight: bolder;
+  font-size: larger;
+  display: flex;
+  border: none;
+  background-color: rgba(128, 128, 128, 0);
+ }
+ .dot-other-sidebar:hover {
+  background-color: rgba(215, 213, 213, 0.605);
+  width: 0px;
+  padding-right: 22px;
+  border-radius: 7px;
+ height: 30px;
+ width: 30px;
+ display: ;
+
+ }
+ .line-other-sidebar {
+ margin-left: 975px;
+ margin-top: 15px;
+ color: rgba(128, 128, 128, 0.463);
+
+ }
+ .group-other-sidebar {
+  margin-left: 975px;
+ margin-top: 25px;
+ font-family: system-ui;
+  font-weight: 500;
+  color: gray;
+
+ }
+ .plus-other-sidebar {
+  margin-left: px;
+ margin-top: 3px;
+ font-family: system-ui;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color:  rgba(170, 169, 169, 0.763);
+  display: flex;
+  width: 25px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+ 
+ }
+ .groupchat-other-sidebar {
+  margin-left: 50px;
+ margin-top: -30px;
+ font-family: system-ui;
+  font-weight: 500;
+  cursor: pointer;
+
+ }
+ .create-other-sidebar {
+display: inline-block;
+width: 200px;
+height: 40px;
+margin-top: 20px;
+margin-left: 970px;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+border-radius: 10px;
+
+ }
+ .create-other-sidebar:hover {
+background-color: rgba(201, 225, 236, 0.904);
+transform: 0.15s;
+ }
+ .position-fixed {
+  position: fixed;
+ }
+ .grouup {
+  border-radius: 100%;
+ }
+ .dashh {
+width: 30px;
+ }
+ .markett {
+width: 30px;
+ }
+ .hover-study-chelsea {
+  margin-top: 7px;
+  width: 200px;
+  margin-left: 136px;
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 400;
+ }
+ .chels {
+  color: rgb(0, 102, 255);
+  font-weight: 600;
+ }
+ .chelsea-post {
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 387px;
+  margin-top: 950px;
+  width: 430px;
+  position: absolute;
+  text-align: left;
+ }
+ .chelss {
+  color: rgb(0, 102, 255);
+  cursor: pointer;
+ }
+ .chelss:hover {
+  color: blue;
+ }
+ .hover-study-chelsea-long {
+  margin-top: 4px;
+  width: 230px;
+  margin-left: 136px;
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 400;
+ }
+ .ronaldo-post {
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 387px;
+  margin-top: 1615px;
+  width: 430px;
+  position: absolute;
+  text-align: left;
+ }
+ .cristiano {
+  color: rgb(0, 102, 255);
+  cursor: pointer;
+ }
+ .cristiano:hover {
+  color: blue
+
+ }
+ .plus-seven {
+  position: absolute;
+  margin-top: 1887px;
+  margin-left: 670px;
+  color: white;
+  font-family: system-ui;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.324);
+  cursor: pointer;
+  padding-top: 100px;
+  padding-bottom: 101px;
+  padding-left: 60px;
+  padding-right: 60px;
+ }
+ .project-post {
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 387px;
+  margin-top: 295px;
+  width: 430px;
+  position: absolute;
+  text-align: left;
+  color: black;
+ }
+ 
+ .live-min-width {
+  min-width: 1000px;
+ }
+ .sidebar {
+  min-height: 100px;
+ }
+</style>
+</head>
+  <body class="body">
+    <div class="upper-center">
+      <div class="the-one">
+       
+      <img class="laptop-three" src="james-2025.jpg">
+     
+      </div>
+      <input class="type-place" type="text" placeholder="What's on your mind, James">
+      </div>
+<div class="line">
+  ____________________________________________________
+</div>
+<div class="live-min-width">
+<div  class="live-first">
+<img  class="live-video" src="live-video-color.png">
+<div class="live-vide">Live video</div>  
+</div>
+
+<div class="live-second">
+  <div class="live-second-first">
+  <img  class="photos-1" src="photo-icon-color.png">
+  <div class="photos-videos">Photos/Videos</div> 
+</div>
+    </div>
+   
+    <div class="live-second">
+      <div class="live-third">
+      <img  class="photos-reels" src="reels-icon-color.png">
+      <div class="photos-videos">Reels</div>
+    </div>
+    </div>        
+  </div>
+<div class="create">
+  <div class="create-share">
+<div class="plus">+</div>
+<div class="crea">Create</div>
+<div class="sto">story</div>
+<div class="sha">Share</div>
+<div class="shaa">a</div>
+<div class="shaaa">photo</div>
+<div class="shaaaa">or</div>
+<div class="shaaaaa">write</div>
+<div class="shaaaaaa">something.</div>
+</div>
+</div>
+
+<div class="chelsea-post">In 2012, <span class="chelss">Chelsea Football Club</span>  became the first and the only  London Club to win The champions League.
+  Till date, No london club has won it but chelsea made it twice in 2021 conceading on 2 goals in the knockouts stage.
+  LONDON IS ALWAYS?</div>
+
+  <div class="ronaldo-post"><span class="cristiano">Cristiano Ronaldo</span> is a football legend renowned for his goal-scoring 
+    prowess and numerous records.
+     He has won multiple UEFA Champions League titles, domestic championships,
+      and several Ballon d'Or awards. Ronaldo's impact on the sport cements his status as
+      the greatest players in history.(GOAT)</div>
+
+      <div class="project-post">Took on the challenge of recreating the Facebook homepage as a solo project project to sharpen my HTML ans CSS skills. and after weeks of writing over 2000 lines of code. I MADE THIS!</div>
+
+
+<div class="plus-seven">+7</div>
+
+<img class="story-picture" src="james01-2025.jpg">
+<img class="story-relative" src="james-2025.jpg">
+<div class="story-name">Lazarus James</div>
+
+<div class="content-one">
+<img class="content-profile" src="james01-2025.jpg">
+<div class="content-one-hover">
+  <img class="content-profile-hover" src="james01-2025.jpg"> 
+  <div class="hover-name">Lazarus James</div>
+
+  <button class="hover-button">Following</button>
+  <img class="hover-dash" src="Professional dashboard icon.png">
+  <button class="hover-message">Message</button>
+  <img class="hover-message-button" src="message-icon-color.png">
+<img class="hover-friends" src="Friends icon.png">
+<button class="hover-dot">...</button>
+<div class="hover-study">studied at <span class="hover-school">Olusegun Agagu university of science and technology</span></div>
+</div>
+</div>
+
+<div class="content-name">Lazarus James</div>
+<div class="hover-time">
+<div class="time-today">Today at 10.03PM <span class="middot">&middot;</span><img  class="world-view"  src="world-view.png"></div>
+<div class="hover-time-circle">Friday, 24 january, 2025 at 10.03PM</div>
+</div>
+</div>
+
+
+<img class="content-james" src="Screenshot 2025-01-29 155355.png">
+<div class="gap">
+<img class="like-emoji" src="like-emoji.png">
+<img class="love-emoji" src="love-emoji.png">
+<div class="four-hundred">400</div>
+</div>
+<div class="gap-two">
+<div class="two-hundred">200</diV>
+<img class="comment-emoji" src="comment-icon.png">
+<div class="sixteen">16</diV>
+
+<img class="share-emoji" src="share-icon.png">
+</div>
+<div class="line-two">
+ ______________________________________________________
+</div>
+<div class="first-down">
+  <div class="like-hover">
+<img class="like-down-one" src="like-icon (2).png">
+<div class="like-hover-exact">
+<img class="like-emoji-hover" src="like-emoji.png">
+<img class="love-emoji-hover" src="love-emoji.png">
+<img class="care-emoji-hover" src="care-emoji.png">
+<img class="haha-emoji-hover" src="haha-emoji.png">
+<img class="wow-emoji-hover" src="wow-emoji.png">
+<img class="sad-emoji-hover" src="sad-emoji.png">
+<img class="angry-emoji-hover" src="angry-emoji.png">
+</div>
+<div class="like-hover-background">
+
+</div>
+</div>
+<div class="like-down">Like</div>
+</div>
+
+<div class="second-down">
+  <img class="comment-down-one" src="comment-icon.png">
+  <div class="comment-down">Comment</div>
+</div>
+
+<div class="third-down">
+  <img class="share-down-one" src="share-icon.png">
+  <div class="share-down">Share</div>
+</div>
+
+
+<div class="content-one">
+  <img class="content-profile" src="chelsea-icon.jpg">
+  <div class="content-one-hover">
+    <img class="content-profile-hover" src="chelsea-icon.jpg"> 
+    <div class="hover-name">Chelsea football club</div>
+  
+    <button class="hover-button">Following</button>
+    <img class="hover-dash" src="Professional dashboard icon.png">
+    <button class="hover-message">Message</button>
+    <img class="hover-message-button" src="message-icon-color.png">
+  <img class="hover-friends" src="Friends icon.png">
+  <button class="hover-dot">...</button>
+  <div class="hover-study">Page <span class="hover-school">&middot; Sports team</span></div>
+  
+  <div class="hover-study-chelsea">Welcome to the official Facebook page of Chelsea FC!</div>
+  <div class="hover-study-chelsea"><span class="chels">chelseafc.com</span></div>
+  
+ 
+</div>
+  </div>
+  
+  <div class="content-name">Chelsea Football Club</div>
+  <div class="hover-time">
+  <div class="time-today">Today at 10.03PM <span class="middot">&middot;</span><img  class="world-view"  src="world-view.png"></div>
+  <div class="hover-time-circle">Friday, 24 january, 2025 at 10.03PM</div>
+  </div>
+  </div>
+  
+  
+
+  <img class="content-james" src="chelsea-post-two.jpg">
+  <div class="gap">
+  <img class="like-emoji" src="like-emoji.png">
+  <img class="love-emoji" src="love-emoji.png">
+  <div class="four-hundred">1.6M</div>
+  </div>
+  <div class="gap-two">
+  <div class="two-hundred">50k</diV>
+  <img class="comment-emoji" src="comment-icon.png">
+  <div class="sixteen">7k</diV>
+  
+  <img class="share-emoji" src="share-icon.png">
+  </div>
+  <div class="line-two">
+   ______________________________________________________
+  </div>
+  <div class="first-down">
+    <div class="like-hover">
+  <img class="like-down-one" src="like-icon (2).png">
+  <div class="like-hover-exact">
+  <img class="like-emoji-hover" src="like-emoji.png">
+  <img class="love-emoji-hover" src="love-emoji.png">
+  <img class="care-emoji-hover" src="care-emoji.png">
+  <img class="haha-emoji-hover" src="haha-emoji.png">
+  <img class="wow-emoji-hover" src="wow-emoji.png">
+  <img class="sad-emoji-hover" src="sad-emoji.png">
+  <img class="angry-emoji-hover" src="angry-emoji.png">
+  </div>
+  <div class="like-hover-background">
+  
+  </div>
+  </div>
+  <div class="like-down">Like</div>
+  </div>
+  
+  <div class="second-down">
+    <img class="comment-down-one" src="comment-icon.png">
+    <div class="comment-down">Comment</div>
+  </div>
+  
+  <div class="third-down">
+    <img class="share-down-one" src="share-icon.png">
+    <div class="share-down">Share</div>
+  </div>
+
+  
+
+  <div class="content-one">
+    <img class="content-profile" src="cristiano-icon.jpg">
+    <div class="content-one-hover">
+      <img class="content-profile-hover" src="cristiano-icon.jpg"> 
+      <div class="hover-name">Cristiano Ronaldo</div>
+    
+      <button class="hover-button">Following</button>
+      <img class="hover-dash" src="Professional dashboard icon.png">
+      <button class="hover-message">Message</button>
+      <img class="hover-message-button" src="message-icon-color.png">
+    <img class="hover-friends" src="friends-icon-color.png">
+    <button class="hover-dot">...</button>
+    <div class="hover-study">Page <span class="hover-school">&middot; Athlete</span></div>
+    <div class="hover-study-chelsea-long">Welcome to the official Facebook page of Cristiano Ronaldo.</div>
+    <div class="hover-study-chelsea"><span class="chels">cristianoronaldo.com</span></div>
+    
+  </div>
+    </div>
+    
+    <div class="content-name">Cristiano Ronaldo</div>
+    <div class="hover-time">
+    <div class="time-today">Today at 10.03PM <span class="middot">&middot;</span><img  class="world-view"  src="world-view.png"></div>
+    <div class="hover-time-circle">Friday, 24 january, 2025 at 10.03PM</div>
+    </div>
+    </div>
+    
+    
+    <img class="content-james" src="ronaldo-collage-one.jpg">
+    <div class="gap">
+    <img class="like-emoji" src="like-emoji.png">
+    <img class="love-emoji" src="love-emoji.png">
+    <div class="four-hundred">400</div>
+    </div>
+    <div class="gap-two">
+    <div class="two-hundred">200</diV>
+    <img class="comment-emoji" src="comment-icon.png">
+    <div class="sixteen">16</diV>
+    
+    <img class="share-emoji" src="share-icon.png">
+    </div>
+    <div class="line-two">
+     ______________________________________________________
+    </div>
+    <div class="first-down">
+      <div class="like-hover">
+    <img class="like-down-one" src="like-icon (2).png">
+    <div class="like-hover-exact">
+    <img class="like-emoji-hover" src="like-emoji.png">
+    <img class="love-emoji-hover" src="love-emoji.png">
+    <img class="care-emoji-hover" src="care-emoji.png">
+    <img class="haha-emoji-hover" src="haha-emoji.png">
+    <img class="wow-emoji-hover" src="wow-emoji.png">
+    <img class="sad-emoji-hover" src="sad-emoji.png">
+    <img class="angry-emoji-hover" src="angry-emoji.png">
+    </div>
+    <div class="like-hover-background">
+    
+    </div>
+    </div>
+    <div class="like-down">Like</div>
+    </div>
+    
+    <div class="second-down">
+      <img class="comment-down-one" src="comment-icon.png">
+      <div class="comment-down">Comment</div>
+    </div>
+    
+    <div class="third-down">
+      <img class="share-down-one" src="share-icon.png">
+      <div class="share-down">Share</div>
+    </div>
+
+
+    <div class="content-one">
+      <img class="content-profile" src="james01-2025.jpg">
+      <div class="content-one-hover">
+        <img class="content-profile-hover" src="james01-2025.jpg"> 
+        <div class="hover-name">Lazarus James</div>
+      
+        <button class="hover-button">Following</button>
+        <img class="hover-dash" src="Professional dashboard icon.png">
+        <button class="hover-message">Message</button>
+        <img class="hover-message-button" src="Messages icon.png">
+      <img class="hover-friends" src="Friends icon.png">
+      <button class="hover-dot">...</button>
+      <div class="hover-study">studied at <span class="hover-school">Olusegun Agagu university of science and technology</span></div>
+      </div>
+      </div>
+      
+      <div class="content-name">Lazarus James</div>
+      <div class="hover-time">
+      <div class="time-today">Today at 10.03PM <span class="middot">&middot;</span><img  class="world-view"  src="world-view.png"></div>
+      <div class="hover-time-circle">Friday, 24 january, 2025 at 10.03PM</div>
+      </div>
+      </div>
+      
+      
+      <img class="content-james" src="james-2025.jpg">
+      <div class="gap">
+      <img class="like-emoji" src="like-emoji.png">
+      <img class="love-emoji" src="love-emoji.png">
+      <div class="four-hundred">400</div>
+      </div>
+      <div class="gap-two">
+      <div class="two-hundred">200</diV>
+      <img class="comment-emoji" src="comment-icon.png">
+      <div class="sixteen">16</diV>
+      
+      <img class="share-emoji" src="share-icon.png">
+      </div>
+      <div class="line-two">
+       ______________________________________________________
+      </div>
+      <div class="first-down">
+        <div class="like-hover">
+      <img class="like-down-one" src="like-icon (2).png">
+      <div class="like-hover-exact">
+      <img class="like-emoji-hover" src="like-emoji.png">
+      <img class="love-emoji-hover" src="love-emoji.png">
+      <img class="care-emoji-hover" src="care-emoji.png">
+      <img class="haha-emoji-hover" src="haha-emoji.png">
+      <img class="wow-emoji-hover" src="wow-emoji.png">
+      <img class="sad-emoji-hover" src="sad-emoji.png">
+      <img class="angry-emoji-hover" src="angry-emoji.png">
+      </div>
+      <div class="like-hover-background">
+      
+      </div>
+      </div>
+      <div class="like-down">Like</div>
+      </div>
+      
+      <div class="second-down">
+        <img class="comment-down-one" src="comment-icon.png">
+        <div class="comment-down">Comment</div>
+      </div>
+      
+      <div class="third-down">
+        <img class="share-down-one" src="share-icon.png">
+        <div class="share-down">Share</div>
+      </div>
+
+      <div class="content-one">
+        <img class="content-profile" src="james01-2025.jpg">
+        <div class="content-one-hover">
+          <img class="content-profile-hover" src="james01-2025.jpg"> 
+          <div class="hover-name">Lazarus James</div>
+        
+          <button class="hover-button">Following</button>
+          <img class="hover-dash" src="Professional dashboard icon.png">
+          <button class="hover-message">Message</button>
+          <img class="hover-message-button" src="Messages icon.png">
+        <img class="hover-friends" src="Friends icon.png">
+        <button class="hover-dot">...</button>
+        <div class="hover-study">studied at <span class="hover-school">Olusegun Agagu university of science and technology</span></div>
+        </div>
+        </div>
+        
+        <div class="content-name">Lazarus James</div>
+        <div class="hover-time">
+        <div class="time-today">Today at 10.03PM <span class="middot">&middot;</span><img  class="world-view"  src="world-view.png"></div>
+        <div class="hover-time-circle">Friday, 24 january, 2025 at 10.03PM</div>
+        </div>
+        </div>
+        
+        
+        <img class="content-james" src="james-2025.jpg">
+        <div class="gap">
+        <img class="like-emoji" src="like-emoji.png">
+        <img class="love-emoji" src="love-emoji.png">
+        <div class="four-hundred">400</div>
+        </div>
+        <div class="gap-two">
+        <div class="two-hundred">200</diV>
+        <img class="comment-emoji" src="comment-icon.png">
+        <div class="sixteen">16</diV>
+        
+        <img class="share-emoji" src="share-icon.png">
+        </div>
+        <div class="line-two">
+         ______________________________________________________
+        </div>
+        <div class="first-down">
+          <div class="like-hover">
+        <img class="like-down-one" src="like-icon (2).png">
+        <div class="like-hover-exact">
+        <img class="like-emoji-hover" src="like-emoji.png">
+        <img class="love-emoji-hover" src="love-emoji.png">
+        <img class="care-emoji-hover" src="care-emoji.png">
+        <img class="haha-emoji-hover" src="haha-emoji.png">
+        <img class="wow-emoji-hover" src="wow-emoji.png">
+        <img class="sad-emoji-hover" src="sad-emoji.png">
+        <img class="angry-emoji-hover" src="angry-emoji.png">
+        </div>
+        <div class="like-hover-background">
+        
+        </div>
+        </div>
+        <div class="like-down">Like</div>
+        </div>
+        
+        <div class="second-down">
+          <img class="comment-down-one" src="comment-icon.png">
+          <div class="comment-down">Comment</div>
+        </div>
+        
+        <div class="third-down">
+          <img class="share-down-one" src="share-icon.png">
+          <div class="share-down">Share</div>
+        </div>
+
+        <div class="content-one">
+          <img class="content-profile" src="james01-2025.jpg">
+          <div class="content-one-hover">
+            <img class="content-profile-hover" src="james01-2025.jpg"> 
+            <div class="hover-name">Lazarus James</div>
+          
+            <button class="hover-button">Following</button>
+            <img class="hover-dash" src="Professional dashboard icon.png">
+            <button class="hover-message">Message</button>
+            <img class="hover-message-button" src="Messages icon.png">
+          <img class="hover-friends" src="Friends icon.png">
+          <button class="hover-dot">...</button>
+          <div class="hover-study">studied at <span class="hover-school">Olusegun Agagu university of science and technology</span></div>
+          </div>
+          </div>
+          
+          <div class="content-name">Lazarus James</div>
+          <div class="hover-time">
+          <div class="time-today">Today at 10.03PM <span class="middot">&middot;</span><img  class="world-view"  src="world-view.png"></div>
+          <div class="hover-time-circle">Friday, 24 january, 2025 at 10.03PM</div>
+          </div>
+          </div>
+          
+          
+          <img class="content-james" src="james-2025.jpg">
+          <div class="gap">
+          <img class="like-emoji" src="like-emoji.png">
+          <img class="love-emoji" src="love-emoji.png">
+          <div class="four-hundred">400</div>
+          </div>
+          <div class="gap-two">
+          <div class="two-hundred">200</diV>
+          <img class="comment-emoji" src="comment-icon.png">
+          <div class="sixteen">16</diV>
+          
+          <img class="share-emoji" src="share-icon.png">
+          </div>
+          <div class="line-two">
+           ______________________________________________________
+          </div>
+          <div class="first-down">
+            <div class="like-hover">
+          <img class="like-down-one" src="like-icon (2).png">
+          <div class="like-hover-exact">
+          <img class="like-emoji-hover" src="like-emoji.png">
+          <img class="love-emoji-hover" src="love-emoji.png">
+          <img class="care-emoji-hover" src="care-emoji.png">
+          <img class="haha-emoji-hover" src="haha-emoji.png">
+          <img class="wow-emoji-hover" src="wow-emoji.png">
+          <img class="sad-emoji-hover" src="sad-emoji.png">
+          <img class="angry-emoji-hover" src="angry-emoji.png">
+          </div>
+          <div class="like-hover-background">
+          
+          </div>
+          </div>
+          <div class="like-down">Like</div>
+          </div>
+          
+          <div class="second-down">
+            <img class="comment-down-one" src="comment-icon.png">
+            <div class="comment-down">Comment</div>
+          </div>
+          
+          <div class="third-down">
+            <img class="share-down-one" src="share-icon.png">
+            <div class="share-down">Share</div>
+          </div>
+          <div class="position-fixed">
+<div class="contacts-other-sidebar">Contacts</div>
+<img class="search-other-sidebar" src="Search icon.png">
+<button class="dot-other-sidebar">...</button>
+<div class="line-other-sidebar">_______________________________</div>
+<div class="group-other-sidebar">Group chats</div>
+<div class="create-other-sidebar">
+  <div class="plus-other-sidebar">+</div>
+  <div class="groupchat-other-sidebar">Create group chat</div>
+</div>
+</div>
+    <div class="sidebar">
+      <div class="sidebar-link">
+      <img class="lapi" src="james-2025.jpg">
+      <div class="home-side">Lazarus</div>
+        <div class="james-side">James</div>
+       
+      </div>
+      <div class="sidebar-link">
+        <img src="friends-icon-color.png">
+        <div class="friends-side">Friends</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="dashh" src="dashboard-icon-color.png">
+        <div class="dash">Professional</div>
+        <div class="prof">dashboard</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="grouup" src="group-color.jpg">
+        <div class="guru">Groups</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="markett" src="marketplace-icon-color.png">
+        <div class="oja">Marketplace</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="video-icon-color.png">
+        <div class="vid">Video</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img class="clockk" src="clock-icon-color.png">
+        <div class="mem">Memories</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="pink-icon-color.png">
+        <div class="save">Saved</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img class="page" src="flag-icon-color.png">
+        <div class="pag">Pages</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img class="src" src="reels-icon-color.png">
+        <div class="reel">Reels</div>
+</div>
+<div class="squad"><span class="pri">Privacy</span> · <span class="ter">Terms</span>  · <span class="adv">Advertising</span>  · <span class="adc">Ad Choice</span>  <span class="coo">Cookies</span>  · <span class="mor">More</span>  · <span class="met">James © 2025</span></div>
+    </div>
+
+   
+<div class="header">
+  <img class="facebook-logo" src="Facebook logo.png">
+      <div class="right-section">
+        <img  class="search-button" src="Search icon.png">
+      <input class="search" type="text" placeholder="Search Facebook"> 
+       </div>
+<div class="middle-section">
+ <div>
+<div class="home-press">
+ <img class="home-button" src="Home icon.png">
+ <div class="home-tool">Home</div>
+</div>
+ <div class="dot">&#x2022;</div>
+</div>
+
+<div>
+  <div class="friends-press">
+    <img class="friends-icon" src="Friends icon.png">
+ <div class="friends-tool">Friends</div>
+</div>
+ <div class="four">4</div>
+
+</div>
+  <div>
+    <div class="video-press">
+ <img class="video-icon" src="Video'icin.png">
+ <div class="video-tool">Videos</div>
+  </div>
+<div class="five">5</div>
+</div>
+<div>
+  <div class="marketplace-press">
+<img class="marketplace-icon" src="Marketplace icon.png">
+<div class="marketplace-tool">Marketplace</div>
+</div>
+<div class="sir-dot">&#x2022;</div>
+</div>
+</div>
+<div class="left-section">
+  <div class="menu-press">
+  <img class="menu" src="Menu icon.png">
+  <div class="menu-tool">Menu</div>
+  </div>
+  <div class="message-press">
+  <img class="message" src="Messages icon.png">
+  <div class="message-tool">Messages</div>
+  </div>
+  <div>
+
+    <div class="notification-press">
+  <img class="notification" src="Notification icon.png">
+  <div class="notification-tool">Notifications</div>
+    </div>
+  <div class="thirty">10</div>
+</div>
+
+<div class="account-press">
+  <img class="laptop" src="james-2025.jpg">
+  <div class="account-tool">Account</div>
+</div>
+
+</div>
+</body>
